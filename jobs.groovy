@@ -37,6 +37,7 @@ for(site in sites){
                 // teamDomain('foo')
                 // authToken('bar')
                 // room('test')
+                botUser(false)
                 startNotification(false)
                 notifySuccess(false)
                 notifyAborted(true)
@@ -51,7 +52,7 @@ for(site in sites){
                 // customMessage('Hello!')
                 // buildServerUrl(null)
                 // sendAs(null)
-                // commitInfoChoice('NONE')
+                commitInfoChoice('NONE')
             }
         }
     }
