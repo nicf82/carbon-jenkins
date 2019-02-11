@@ -44,7 +44,7 @@ for(site in sites){
                 notifyFailure(true)
                 notifyUnstable(true)
                 notifyBackToNormal(true)
-                notifyRegression(true)
+                notifyRegression(false)
                 notifyRepeatedFailure(true)
                 //includeTestSummary(false)
                 // includeCustomMessage(true)
