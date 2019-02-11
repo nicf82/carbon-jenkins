@@ -4,7 +4,7 @@ def sites = [
     "service.carboninternet.net",
     "www.vandervelde.co.uk",
     "www.amboxingnewcastle.co.uk",
-    "www.flightsimcentre.com",
+    "dev.flightsimcentre.com",
     "www.blueyonderairtours.com",
     "www.combat-athletics.co.uk",
     "www.funkylimos.com",
