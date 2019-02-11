@@ -13,10 +13,10 @@ def sites = [
 ]
 
 folder('spider-checks') {
-    description('Websites')
+    description('Website spiders checking for broken links')
 }
 
-for(site in sites){
+for(site in sites) {
     
     job('spider-checks/' + site) {
         triggers {
