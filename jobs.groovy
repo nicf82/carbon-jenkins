@@ -78,7 +78,7 @@ job("email-sender") {
 	}
 	steps {
 		shell("""docker run --rm --name laravel -v \$PWD:/var/www hitalos/laravel composer install
-docker run --rm --name laravel -v /var/lib/jenkins/workspace/email-sender:/var/www -e LOG_CHANNEL=stderr hitalos/laravel phpunit""")
+docker run --rm --name laravel -v /var/lib/jenkins/workspace/email-sender:/var/www -e LOG_CHANNEL=stderr hitalos/laravel phpunit --debug""")
 	}
 
 }
