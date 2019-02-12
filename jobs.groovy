@@ -68,10 +68,11 @@ job("email-sender") {
     concurrentBuild(false)
 	scm {
 		git {
-			remote {
-				bitbucket("git@bitbucket.org:carboninternet/email-sender.git", "ssh")
-				credentials("a6003119-dffb-4c00-92bd-356c93e91c23")
-			}
+            remote {
+                name('origin')
+                url("git@bitbucket.org:carboninternet/email-sender.git")
+                credentials("a6003119-dffb-4c00-92bd-356c93e91c23")
+            }
 			branch("*/master")
 		}
 	}
