@@ -57,3 +57,27 @@ for(site in sites) {
         }
     }
 }
+
+job("email-sender") {
+    triggers{
+        bitbucketPush()
+    }
+	description("Email sender test and build")
+	keepDependencies(false)
+    disabled(false)
+    concurrentBuild(false)
+	scm {
+		git {
+			remote {
+				github("git@bitbucket.org:carboninternet/email-sender.git", "ssh")
+				credentials("a6003119-dffb-4c00-92bd-356c93e91c23")
+			}
+			branch("*/master")
+		}
+	}
+	steps {
+		shell("""docker run --rm --name laravel -v \$PWD:/var/www hitalos/laravel composer install
+docker run --rm --name laravel -v /var/lib/jenkins/workspace/email-sender:/var/www -e LOG_CHANNEL=stderr hitalos/laravel phpunit""")
+	}
+
+}
