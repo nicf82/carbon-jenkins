@@ -69,7 +69,7 @@ job("email-sender") {
 	scm {
 		git {
 			remote {
-				github("git@bitbucket.org:carboninternet/email-sender.git", "ssh")
+				bitbucket("git@bitbucket.org:carboninternet/email-sender.git", "ssh")
 				credentials("a6003119-dffb-4c00-92bd-356c93e91c23")
 			}
 			branch("*/master")
