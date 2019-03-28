@@ -30,7 +30,7 @@ for(site in sites) {
             shell(
                 """docker run --rm carboninternet/linkchecker """ + 
                 """--threads 1 --recursion-level 3 """ + 
-                """--ignore-url xmlrpc.php\$ http://""" + site)
+                """--ignore-url xmlrpc.php http://""" + site)
         }
         publishers {
             slackNotifier {
